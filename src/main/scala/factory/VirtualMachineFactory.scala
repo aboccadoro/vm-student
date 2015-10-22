@@ -11,7 +11,6 @@ import vm.{VirtualMachineParser, MyVirtualMachine, VirtualMachine}
  * implement each method such that it returns an object of the correct type.
  */
 object VirtualMachineFactory {
-  // TODO
   def byteCodeFactory: ByteCodeFactory = ???
   // TODO
   def vendorParser: ProgramParser = ???
@@ -21,4 +20,5 @@ object VirtualMachineFactory {
   def virtualMachineParser: VirtualMachineParser = ???
   // TODO
   def virtualMachine: VirtualMachine = ???
+  // TODO
 }
