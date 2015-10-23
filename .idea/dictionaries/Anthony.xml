@@ -8,7 +8,7 @@
       <w>idup</w>
       <w>iinc</w>
       <w>imul</w>
-      <w>ineq</w>
+      <w>ineg</w>
       <w>irem</w>
       <w>isub</w>
       <w>iswap</w>
