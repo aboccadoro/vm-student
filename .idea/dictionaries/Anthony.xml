@@ -1,3 +1,17 @@
 <component name="ProjectDictionaryState">
-  <dictionary name="Anthony" />
+  <dictionary name="Anthony">
+    <words>
+      <w>iadd</w>
+      <w>iconst</w>
+      <w>idec</w>
+      <w>idiv</w>
+      <w>idup</w>
+      <w>iinc</w>
+      <w>imul</w>
+      <w>ineq</w>
+      <w>irem</w>
+      <w>isub</w>
+      <w>iswap</w>
+    </words>
+  </dictionary>
 </component>
