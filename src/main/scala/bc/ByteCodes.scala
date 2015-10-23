@@ -7,15 +7,10 @@ import vm.VirtualMachine
 */
 class ByteCodes
 
-class iconst(NUMS: Seq[Int]) extends ByteCode {
+class iconst(NUM: Int) extends ByteCode {
   val code: Byte = bytecode.apply(names.head)
-  def execute(vm: VirtualMachine): VirtualMachine = {
-    for (n <- NUMS) {
-      vm.push(n)
-    }
-    vm
-    // TODO
-  }
+  def execute(vm: VirtualMachine): VirtualMachine = vm.push(NUM)
+  // TODO
 }
 
 class iadd extends ByteCode {

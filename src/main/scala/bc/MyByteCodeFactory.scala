@@ -3,11 +3,9 @@ package bc
 /**
 *  Created by Anthony on 10/22/2015.
 */
-class MyByteCodeFactory extends ByteCodeFactory {
-  val names = Vector("iconst", "iadd", "isub", "imul", "idiv", "irem", "ineg", "iinc", "idec", "idup", "iswap", "print")
-  val bytecode = names.zip(1.to(names.length).map(_.toByte)).toMap
+object MyByteCodeFactory extends ByteCodeFactory with ByteCodeValues {
   def make(byte: Byte, args: Int*): ByteCode = {
-    if (byte.equals(bytecode.apply("iconst"))) new iconst(for(arg <- args) yield arg)
+    if (byte.equals(bytecode.apply("iconst"))) new iconst((for(arg <- args) yield arg).head)
     else {
       if (byte.equals(bytecode.apply("iadd"))) new iadd
       else if (byte.equals(bytecode.apply("isub"))) new isub

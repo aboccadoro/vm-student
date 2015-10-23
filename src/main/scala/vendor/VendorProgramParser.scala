@@ -1,9 +1,11 @@
 package vendor
 
+import bc.ByteCodeValues
+
 /**
 *  Created by Anthony on 10/22/2015.
 */
-trait VendorProgramParser extends ProgramParser {
+trait VendorProgramParser extends ProgramParser with ByteCodeValues {
   def parse(file: String): InstructionList = {
     val name = scala.io.Source.fromString(file)
     name.close()
@@ -11,7 +13,6 @@ trait VendorProgramParser extends ProgramParser {
     // TODO
   }
   def parseString(string: String): InstructionList = {
-    val names = Vector("iconst", "iadd", "isub", "imul", "idiv", "irem", "ineg", "iinc", "idec", "idup", "iswap", "print")
     val instructions: InstructionList = Vector[Instruction]()
     val order = string.split("\n")
     for (s <- order) {

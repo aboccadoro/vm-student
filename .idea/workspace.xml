@@ -4,9 +4,7 @@
     <list default="true" id="e1134124-aed8-4486-8fdf-b443b9b07278" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/bc/ByteCodes.scala" afterPath="$PROJECT_DIR$/src/main/scala/bc/ByteCodes.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/bc/MyByteCodeFactory.scala" afterPath="$PROJECT_DIR$/src/main/scala/bc/MyByteCodeFactory.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/bc/MyByteCodeParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/bc/MyByteCodeParser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/factory/VirtualMachineFactory.scala" afterPath="$PROJECT_DIR$/src/main/scala/factory/VirtualMachineFactory.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/vendor/VendorProgramParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/vendor/VendorProgramParser.scala" />
     </list>
     <ignored path="03-vm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,21 +59,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyByteCodeParser.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyByteCodeParser.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/bc/MyByteCodeParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1424581">
+            <state vertical-scroll-proportion="0.0">
               <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyByteCodeFactory.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyByteCodeFactory.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/bc/MyByteCodeFactory.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.16620111">
+              <caret line="7" column="92" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -96,6 +94,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ByteCodes.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/bc/ByteCodes.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VendorProgramParser.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/vendor/VendorProgramParser.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -131,11 +149,11 @@
         <option value="$PROJECT_DIR$/src/main/scala/adapter/ProgramParserAdapter.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/vendor/PublicVendorParserSuite.scala" />
         <option value="$PROJECT_DIR$/src/instructor/scala/bc/ByteCodeFactory.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/vendor/VendorProgramParser.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/bc/MyByteCodeFactory.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/bc/ByteCodes.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/factory/VirtualMachineFactory.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/bc/MyByteCodeParser.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/bc/ByteCodes.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/vendor/VendorProgramParser.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/bc/MyByteCodeFactory.scala" />
       </list>
     </option>
   </component>
@@ -996,7 +1014,7 @@
       <option name="number" value="Default" />
       <updated>1445479674185</updated>
       <workItem from="1445479676206" duration="2540000" />
-      <workItem from="1445482546531" duration="33950000" />
+      <workItem from="1445482546531" duration="35199000" />
     </task>
     <task id="LOCAL-00001" summary="VendorProgramParser [start]">
       <created>1445493118141</created>
@@ -1014,7 +1032,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36490000" />
+    <option name="totallyTimeSpent" value="37739000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1031,7 +1049,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252688" sideWeight="0.4977492" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990354" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32258064" sideWeight="0.5096401" order="8" side_tool="true" content_ui="tabs" />
@@ -1199,37 +1217,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/bc/ByteCodes.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16620111">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/instructor/scala/bc/ByteCodeFactory.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18994413">
           <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/vendor/VendorProgramParser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.118715085">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/factory/VirtualMachineFactory.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding>
-            <element signature="e#17#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,18 +1241,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/bc/MyByteCodeFactory.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/bc/ByteCodes.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/vendor/VendorProgramParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/bc/MyByteCodeParser.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1424581">
+        <state vertical-scroll-proportion="0.0">
           <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/factory/VirtualMachineFactory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+          <folding>
+            <element signature="e#17#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/bc/MyByteCodeFactory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16620111">
+          <caret line="7" column="92" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
           <folding />
         </state>
       </provider>
