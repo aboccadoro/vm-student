@@ -1,9 +1,9 @@
 package factory
 
 import adapter.ProgramParserAdapter
-import bc.{ByteCodeFactory, ByteCodeParser, ByteCodes, MyByteCodeParser}
+import bc._
 import vendor.{ProgramParser, VendorProgramParser}
-import vm.{VirtualMachineParser, MyVirtualMachine, VirtualMachine}
+import vm._
 
 /**
  * The `VirtualMachineFactory` follows the *factory pattern*. It provides
@@ -11,7 +11,7 @@ import vm.{VirtualMachineParser, MyVirtualMachine, VirtualMachine}
  * implement each method such that it returns an object of the correct type.
  */
 object VirtualMachineFactory {
-  def byteCodeFactory: ByteCodeFactory = ???
+  def byteCodeFactory: ByteCodeFactory = new MyByteCodeFactory
   // TODO
   def vendorParser: ProgramParser = new VendorProgramParser {}
   // TODO
