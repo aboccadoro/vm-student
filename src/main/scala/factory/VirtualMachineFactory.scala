@@ -11,14 +11,14 @@ import vm._
  * implement each method such that it returns an object of the correct type.
  */
 object VirtualMachineFactory {
-  def byteCodeFactory: ByteCodeFactory = new MyByteCodeFactory
+  def byteCodeFactory: ByteCodeFactory = MyByteCodeFactory
   // TODO
-  def vendorParser: ProgramParser = new VendorProgramParser {}
+  def vendorParser: ProgramParser = new VendorProgramParser
   // TODO
-  def byteCodeParser: ByteCodeParser = new MyByteCodeParser {}
+  def byteCodeParser: ByteCodeParser = new MyByteCodeParser
   // TODO
-  def virtualMachineParser: VirtualMachineParser = ???
+  def virtualMachineParser: VirtualMachineParser = new ProgramParserAdapter
   // TODO
-  def virtualMachine: VirtualMachine = new MyVirtualMachine {}
+  def virtualMachine: VirtualMachine = new MyVirtualMachine
   // TODO
 }

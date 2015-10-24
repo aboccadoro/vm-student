@@ -5,7 +5,7 @@ import bc.ByteCodeValues
 /**
 *  Created by Anthony on 10/22/2015.
 */
-trait VendorProgramParser extends ProgramParser with ByteCodeValues {
+class VendorProgramParser extends ProgramParser with ByteCodeValues {
   def parse(file: String): InstructionList = {
     val name = scala.io.Source.fromString(file)
     name.close()
