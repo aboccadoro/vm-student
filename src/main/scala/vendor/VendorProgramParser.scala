@@ -7,18 +7,17 @@ import bc.ByteCodeValues
 */
 class VendorProgramParser extends ProgramParser with ByteCodeValues {
   def parse(file: String): InstructionList = {
-    val name = scala.io.Source.fromString(file)
-    name.close()
+    val name = scala.io.Source.fromFile(file)
     parseString(name.mkString)
     // TODO
   }
   def parseString(string: String): InstructionList = {
-    val instructions: InstructionList = Vector[Instruction]()
+    var instructions: InstructionList = Vector[Instruction]()
     val order = string.split("\n")
     for (s <- order) {
-      if (!names.contains(s)) throw new InvalidInstructionFormatException("not a valid instruction input")
-      if (s.split(" ")(0).equals("iconst")) instructions :+ new Instruction(s, Vector[Int](s.split(" ")(1).toInt))
-      else instructions :+ new Instruction(s, Vector[Int]())
+      if (!names.contains(s.split(" ").head) && !Character.isDigit(s.last)) throw new InvalidInstructionFormatException(s + " not a valid instruction input")
+      else if (s.split(" ").head.equals("iconst")) instructions = instructions :+ new Instruction(s.split(" ").head, Vector[Int](s.split(" ").last.toInt))
+      else if (names.contains(s)) instructions = instructions :+ new Instruction(s, Vector[Int]())
     }
     instructions
     // TODO
