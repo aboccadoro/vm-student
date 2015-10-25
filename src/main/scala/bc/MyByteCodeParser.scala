@@ -4,14 +4,20 @@ package bc
 *  Created by Anthony on 10/22/2015.
 */
 class MyByteCodeParser extends ByteCodeParser with ByteCodeValues {
-  val vector = Vector[ByteCode]()
+  var vector = Vector[ByteCode]()
   def parse(bc: Vector[Byte]): Vector[ByteCode] = {
-    for(i <- bc.indices) {
+    val tmp = bc
+    if (tmp.nonEmpty)
       for ((name, code) <- bytecode) {
-        if(code.equals(bc(i)) && name.equals("iconst")) vector :+ MyByteCodeFactory.make(bc(i), bc(i + 1).toInt)
-        else vector :+ MyByteCodeFactory.make(bc(i))
+        if(bytecode.apply(name).equals(bc(0)) && name.equals("iconst")) {
+          vector :+ MyByteCodeFactory.make(bc(0), bc(1))
+          parse(tmp.drop(2))
+        }
+        else if(bytecode.apply(name).equals(bc(0))) {
+          vector = vector :+ MyByteCodeFactory.make(bc(0))
+          parse(tmp.drop(1))
+        }
       }
-    }
     vector
     // TODO
   }

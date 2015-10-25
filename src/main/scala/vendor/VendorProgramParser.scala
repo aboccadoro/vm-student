@@ -9,7 +9,6 @@ class VendorProgramParser extends ProgramParser with ByteCodeValues {
   def parse(file: String): InstructionList = {
     val name = scala.io.Source.fromFile(file)
     parseString(name.mkString)
-    // TODO
   }
   def parseString(string: String): InstructionList = {
     var instructions: InstructionList = Vector[Instruction]()
@@ -20,6 +19,5 @@ class VendorProgramParser extends ProgramParser with ByteCodeValues {
       else if (names.contains(s)) instructions = instructions :+ new Instruction(s, Vector[Int]())
     }
     instructions
-    // TODO
   }
 }

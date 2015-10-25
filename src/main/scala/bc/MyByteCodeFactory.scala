@@ -5,21 +5,27 @@ package bc
 */
 object MyByteCodeFactory extends ByteCodeFactory with ByteCodeValues {
   def make(byte: Byte, args: Int*): ByteCode = {
-    if (byte.equals(bytecode.apply("iconst"))) new iconst((for(arg <- args) yield arg).head)
-    else {
-      if (byte.equals(bytecode.apply("iadd"))) new iadd
-      else if (byte.equals(bytecode.apply("isub"))) new isub
-      else if (byte.equals(bytecode.apply("imul"))) new imul
-      else if (byte.equals(bytecode.apply("idiv"))) new idiv
-      else if (byte.equals(bytecode.apply("irem"))) new irem
-      else if (byte.equals(bytecode.apply("ineg"))) new ineg
-      else if (byte.equals(bytecode.apply("iinc"))) new iinc
-      else if (byte.equals(bytecode.apply("idec"))) new idec
-      else if (byte.equals(bytecode.apply("idup"))) new idup
-      else if (byte.equals(bytecode.apply("iswap"))) new iswap
-      else if (byte.equals(bytecode.apply("print"))) new print
-      else throw new InvalidBytecodeException("not a valid bytecode")
+    var count = 0
+    for((name, code) <- bytecode) {
+      if (code != byte) count += 1
     }
+    if (count == bytecode.size) throw new InvalidBytecodeException("[" + byte + "]" + " is not a supported byte")
+    else if (bytecode.apply("iconst").equals(byte)) new iconst(args.head)
+    else cases(byte)
     // TODO
+  }
+
+  def cases(byte: Byte): ByteCode = byte match {
+    case 2 => new iadd()
+    case 3 => new isub()
+    case 4 => new imul()
+    case 5 => new idiv()
+    case 6 => new irem()
+    case 7 => new ineg()
+    case 8 => new iinc()
+    case 9 => new idec()
+    case 10 => new idup()
+    case 11 => new iswap()
+    case 12 => new print()
   }
 }

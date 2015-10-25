@@ -6,11 +6,9 @@ import bc.{ByteCodeValues, ByteCode}
 *  Created by Anthony on 10/22/2015.
 */
 class MyVirtualMachine extends VirtualMachine with ByteCodeValues {
-  val stack = Vector[Int]()
+  var stack = Vector[Int]()
   def execute(bc: Vector[ByteCode]): VirtualMachine = {
-    for(code <- bc) {
-      code.execute(this)
-    }
+    for (code <- bc) code.execute(this)
     this
     // TODO
   }
@@ -20,14 +18,14 @@ class MyVirtualMachine extends VirtualMachine with ByteCodeValues {
     // TODO
   }
   def push(value: Int): VirtualMachine = {
-    stack :+ value
+    stack = stack :+ value
     this
     // TODO
   }
   def pop(): (Int, VirtualMachine) = {
     if (stack.isEmpty) throw new MachineUnderflowException("no more elements left to pop()")
     val value = stack.head
-    stack.drop(1)
+    stack = stack.drop(1)
     (value, this)
     // TODO
   }
