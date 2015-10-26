@@ -11,8 +11,8 @@ package bc
  * MyByteCodeParser.
  */
 class MyByteCodeParser extends ByteCodeParser with ByteCodeValues {
-  var vector = Vector[ByteCode]()
   def parse(bc: Vector[Byte]): Vector[ByteCode] = {
+    var vector = Vector[ByteCode]()
     var iconst = false
     for (i <- bc.indices) {
       if(!iconst) {
@@ -21,16 +21,11 @@ class MyByteCodeParser extends ByteCodeParser with ByteCodeValues {
             vector = vector :+ MyByteCodeFactory.make(bc(i), bc(i + 1).toInt)
             iconst = true
           }
-          else if (bytecode.apply(name).equals(bc(i))) {
-            vector = vector :+ MyByteCodeFactory.make(bc(i))
-            iconst = false
-          }
+          else if (bytecode.apply(name).equals(bc(i))) vector = vector :+ MyByteCodeFactory.make(bc(i))
         }
       }
       else iconst = false
     }
-    val tmp = vector
-    vector = Vector[ByteCode]()
-    tmp
+    vector
   }
 }
