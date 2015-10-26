@@ -6,7 +6,7 @@ import bc.{ByteCodeValues, ByteCode}
 *  Created by Anthony on 10/22/2015.
 */
 class MyVirtualMachine extends VirtualMachine with ByteCodeValues {
-  var stack = scala.collection.immutable.Vector[Int]()
+  var stack = Vector[Int]()
   def execute(bc: Vector[ByteCode]): VirtualMachine = {
     for (code <- bc) code.execute(this)
     this
