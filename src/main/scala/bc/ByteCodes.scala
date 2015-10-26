@@ -6,11 +6,16 @@ import vm.VirtualMachine
 *  Created by Anthony on 10/22/2015.
 */
 
-
+/**
+ * Each class represents a specific Byte mapped in [[bc.ByteCodeValues.bytecode]] and
+ * is made via MyByteCodeFactory following the factory pattern. Each class has a code
+ * value that represents the Byte value corresponding to the name of the instruction.
+ * Each class has an execute function that executes the calculations given variables
+ * from a virtual machine and then outputs the resulting virtual machine.
+ */
 class iconst(NUM: Int) extends ByteCode {
   val code: Byte = bytecode.apply(names.head)
   def execute(vm: VirtualMachine): VirtualMachine = vm.push(NUM)
-  // TODO
 }
 
 class iadd extends ByteCode {
@@ -20,7 +25,6 @@ class iadd extends ByteCode {
     val y = x._2.pop()
     y._2.push(x._1 + y._1)
   }
-  // TODO
 }
 
 class isub extends ByteCode {
@@ -30,7 +34,6 @@ class isub extends ByteCode {
     val y = x._2.pop()
     y._2.push(x._1 - y._1)
   }
-  // TODO
 }
 
 class imul extends ByteCode {
@@ -40,7 +43,6 @@ class imul extends ByteCode {
     val y = x._2.pop()
     y._2.push(x._1 * y._1)
   }
-  // TODO
 }
 
 class idiv extends ByteCode {
@@ -50,7 +52,6 @@ class idiv extends ByteCode {
     val y = x._2.pop()
     y._2.push(x._1 / y._1)
   }
-  // TODO
 }
 
 class irem extends ByteCode {
@@ -60,7 +61,6 @@ class irem extends ByteCode {
     val y = x._2.pop()
     y._2.push(x._1 % y._1)
   }
-  // TODO
 }
 
 class ineg extends ByteCode {
@@ -69,7 +69,6 @@ class ineg extends ByteCode {
     val x = vm.pop()
     x._2.push(-x._1)
   }
-  // TODO
 }
 
 class iinc extends ByteCode {
@@ -78,7 +77,6 @@ class iinc extends ByteCode {
     val x = vm.pop()
     x._2.push(x._1 + 1)
   }
-  // TODO
 }
 
 class idec extends ByteCode {
@@ -87,7 +85,6 @@ class idec extends ByteCode {
     val x = vm.pop()
     x._2.push(x._1 - 1)
   }
-  // TODO
 }
 
 class idup extends ByteCode {
@@ -95,7 +92,6 @@ class idup extends ByteCode {
   def execute(vm: VirtualMachine): VirtualMachine = {
     val x = vm.pop();
     x._2.push(x._1).push(x._1)
-    // TODO
   }
 }
 
@@ -105,7 +101,6 @@ class iswap extends ByteCode {
     val x = vm.pop()
     val y = x._2.pop()
     y._2.push(x._1).push(y._1)
-    // TODO
   }
 }
 
@@ -115,6 +110,5 @@ class print extends ByteCode {
     val x = vm.pop()
     println(x._1)
     x._2
-    // TODO
   }
 }
