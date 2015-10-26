@@ -12,13 +12,8 @@ import vm._
  */
 object VirtualMachineFactory {
   def byteCodeFactory: ByteCodeFactory = MyByteCodeFactory
-  // TODO
   def vendorParser: ProgramParser = new VendorProgramParser
-  // TODO
   def byteCodeParser: ByteCodeParser = new MyByteCodeParser
-  // TODO
   def virtualMachineParser: VirtualMachineParser = new ProgramParserAdapter
-  // TODO
   def virtualMachine: VirtualMachine = new MyVirtualMachine
-  // TODO
 }

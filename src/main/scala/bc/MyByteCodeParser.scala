@@ -32,6 +32,5 @@ class MyByteCodeParser extends ByteCodeParser with ByteCodeValues {
     val tmp = vector
     vector = Vector[ByteCode]()
     tmp
-    // TODO
   }
 }
