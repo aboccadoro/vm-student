@@ -7,17 +7,19 @@ class MyByteCodeParser extends ByteCodeParser with ByteCodeValues {
   var vector = Vector[ByteCode]()
   def parse(bc: Vector[Byte]): Vector[ByteCode] = {
     val tmp = bc
-    if (tmp.nonEmpty)
+    if (bc.nonEmpty) {
       for ((name, code) <- bytecode) {
-        if(bytecode.apply(name).equals(bc(0)) && name.equals("iconst")) {
-          vector :+ MyByteCodeFactory.make(bc(0), bc(1))
+        if (bytecode.apply(name).equals(bc.head) && name.equals("iconst")) {
+          vector = vector :+ MyByteCodeFactory.make(bc.head, bc(1).toInt)
           parse(tmp.drop(2))
         }
-        else if(bytecode.apply(name).equals(bc(0))) {
-          vector = vector :+ MyByteCodeFactory.make(bc(0))
+        else if (bytecode.apply(name).equals(bc.head)) {
+          vector = vector :+ MyByteCodeFactory.make(bc.head)
           parse(tmp.drop(1))
         }
       }
+    }
+    println(vector)
     vector
     // TODO
   }

@@ -6,9 +6,7 @@ package bc
 object MyByteCodeFactory extends ByteCodeFactory with ByteCodeValues {
   def make(byte: Byte, args: Int*): ByteCode = {
     var count = 0
-    for((name, code) <- bytecode) {
-      if (code != byte) count += 1
-    }
+    for((name, code) <- bytecode) if (code != byte) count += 1
     if (count == bytecode.size) throw new InvalidBytecodeException("[" + byte + "]" + " is not a supported byte")
     else if (bytecode.apply("iconst").equals(byte)) new iconst(args.head)
     else cases(byte)

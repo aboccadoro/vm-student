@@ -9,10 +9,7 @@ import vm.VirtualMachine
 
 class iconst(NUM: Int) extends ByteCode {
   val code: Byte = bytecode.apply(names.head)
-  def execute(vm: VirtualMachine): VirtualMachine = {
-    println("made it")
-    vm.push(NUM)
-  }
+  def execute(vm: VirtualMachine): VirtualMachine = vm.push(NUM)
   // TODO
 }
 
@@ -117,7 +114,7 @@ class print extends ByteCode {
   def execute(vm: VirtualMachine): VirtualMachine = {
     val x = vm.pop()
     println(x._1)
-    x._2.push(x._1)
+    x._2
     // TODO
   }
 }
